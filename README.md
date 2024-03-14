@@ -1,6 +1,6 @@
 # C# CRUD Application
 
-## This is a simple C# application demonstrating CRUD operations using a database with a connection string.
+This is a simple C# application demonstrating CRUD operations using a database with a connection string.
 
 ## Features
 
@@ -43,3 +43,6 @@ git clone https://github.com/vitoroidaniel/LibraryApp)https://github.com/vitoroi
     Use the appropriate buttons or menu options to Insert, Update, Delete, or View records.
 ## Contributing
     Contributions are welcome! Please feel free to submit a pull request or open an issue if you encounter any problems or have suggestions for improvement.
+    
+👋 Hi there! If you enjoy my content and would like to support me, consider buying me a coffee ☕️: [Buy Me a Coffee](https://www.buymeacoffee.com/yourusername)
+
