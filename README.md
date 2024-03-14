@@ -38,7 +38,7 @@ git clone https://github.com/vitoroidaniel/LibraryApp)https://github.com/vitoroi
   Replace YourServerName and YourDatabaseName with your SQL Server instance and database name respectively.
 
 ## Run the application.
-    Usage
+    Usage:
     Upon running the application, you will be presented with a simple interface to perform CRUD operations.
     Use the appropriate buttons or menu options to Insert, Update, Delete, or View records.
 ## Contributing
