@@ -1,5 +1,5 @@
 # C# CRUD Application
-[!Image][c#-github.png]
+[!Image](c#-github.png)
 This is a simple C# application demonstrating CRUD operations using a database with a connection string.
 
 ## Features
