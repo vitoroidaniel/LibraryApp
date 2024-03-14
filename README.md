@@ -1,5 +1,5 @@
 # C# CRUD Application
-
+[!Image][c#-github.png]
 This is a simple C# application demonstrating CRUD operations using a database with a connection string.
 
 ## Features
@@ -19,7 +19,7 @@ This is a simple C# application demonstrating CRUD operations using a database w
 1. Clone this repository to your local machine:
 
 ```bash
-git clone [https://github.com/vitoroidaniel/LibraryApp)https://github.com/vitoroidaniel/LibraryApp]
+git clone https://github.com/vitoroidaniel/LibraryApp)https://github.com/vitoroidaniel/LibraryApp
 ```
 
   Open the solution file (YourSolution.sln) in Visual Studio.
@@ -30,7 +30,16 @@ git clone [https://github.com/vitoroidaniel/LibraryApp)https://github.com/vitoro
 
   Modify the connection string in the app.config or web.config file to point to your database.
 
-  <connectionStrings>
-    <add name="YourConnectionStringName" connectionString="Data Source=YourServerName;Initial Catalog=YourDatabaseName;Integrated Security=True;" providerName="System.Data.SqlClient" />
-  </connectionStrings>
+  `<connectionStrings>
+    <add name="YourConnectionStringName" connectionString="Data Source=YourServerName;Initial Catalog=YourDatabaseName;Integrated Security=True;"     
+         providerName="System.Data.SqlClient" />
+  </connectionStrings>`
 
+  Replace YourServerName and YourDatabaseName with your SQL Server instance and database name respectively.
+
+## Run the application.
+    Usage
+    Upon running the application, you will be presented with a simple interface to perform CRUD operations.
+    Use the appropriate buttons or menu options to Insert, Update, Delete, or View records.
+## Contributing
+    Contributions are welcome! Please feel free to submit a pull request or open an issue if you encounter any problems or have suggestions for improvement.
