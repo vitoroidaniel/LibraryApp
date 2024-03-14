@@ -19,7 +19,7 @@ This is a simple C# application demonstrating CRUD operations using a database w
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/your-repository.git](https://github.com/vitoroidaniel/LibraryApp)https://github.com/vitoroidaniel/LibraryApp
+git clone [https://github.com/vitoroidaniel/LibraryApp)https://github.com/vitoroidaniel/LibraryApp]
 ```
 
   Open the solution file (YourSolution.sln) in Visual Studio.
