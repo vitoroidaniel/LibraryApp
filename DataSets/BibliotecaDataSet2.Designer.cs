@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace LibraryApp {
+namespace LibraryApp.DataSets {
     
     
     /// <summary>
@@ -768,7 +768,7 @@ namespace LibraryApp {
         }
     }
 }
-namespace LibraryApp.BibliotecaDataSet2TableAdapters {
+namespace LibraryApp.DataSets.BibliotecaDataSet2TableAdapters {
     
     
     /// <summary>

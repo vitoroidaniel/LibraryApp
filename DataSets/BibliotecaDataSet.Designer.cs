@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace LibraryApp {
+namespace LibraryApp.DataSets {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace LibraryApp {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("BibliotecaDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("BibliotecaDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class BibliotecaDataSet1 : global::System.Data.DataSet {
+    public partial class BibliotecaDataSet : global::System.Data.DataSet {
         
-        private ImprumutDataTable tableImprumut;
+        private CititorDataTable tableCititor;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public BibliotecaDataSet1() {
+        public BibliotecaDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace LibraryApp {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected BibliotecaDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected BibliotecaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace LibraryApp {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Imprumut"] != null)) {
-                    base.Tables.Add(new ImprumutDataTable(ds.Tables["Imprumut"]));
+                if ((ds.Tables["Cititor"] != null)) {
+                    base.Tables.Add(new CititorDataTable(ds.Tables["Cititor"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace LibraryApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ImprumutDataTable Imprumut {
+        public CititorDataTable Cititor {
             get {
-                return this.tableImprumut;
+                return this.tableCititor;
             }
         }
         
@@ -127,7 +127,7 @@ namespace LibraryApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            BibliotecaDataSet1 cln = ((BibliotecaDataSet1)(base.Clone()));
+            BibliotecaDataSet cln = ((BibliotecaDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace LibraryApp {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Imprumut"] != null)) {
-                    base.Tables.Add(new ImprumutDataTable(ds.Tables["Imprumut"]));
+                if ((ds.Tables["Cititor"] != null)) {
+                    base.Tables.Add(new CititorDataTable(ds.Tables["Cititor"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace LibraryApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableImprumut = ((ImprumutDataTable)(base.Tables["Imprumut"]));
+            this.tableCititor = ((CititorDataTable)(base.Tables["Cititor"]));
             if ((initTable == true)) {
-                if ((this.tableImprumut != null)) {
-                    this.tableImprumut.InitVars();
+                if ((this.tableCititor != null)) {
+                    this.tableCititor.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace LibraryApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "BibliotecaDataSet1";
+            this.DataSetName = "BibliotecaDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/BibliotecaDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/BibliotecaDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableImprumut = new ImprumutDataTable();
-            base.Tables.Add(this.tableImprumut);
+            this.tableCititor = new CititorDataTable();
+            base.Tables.Add(this.tableCititor);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeImprumut() {
+        private bool ShouldSerializeCititor() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace LibraryApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            BibliotecaDataSet1 ds = new BibliotecaDataSet1();
+            BibliotecaDataSet ds = new BibliotecaDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,27 @@ namespace LibraryApp {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void ImprumutRowChangeEventHandler(object sender, ImprumutRowChangeEvent e);
+        public delegate void CititorRowChangeEventHandler(object sender, CititorRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ImprumutDataTable : global::System.Data.TypedTableBase<ImprumutRow> {
+        public partial class CititorDataTable : global::System.Data.TypedTableBase<CititorRow> {
             
-            private global::System.Data.DataColumn columnId_cititor;
+            private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnId_carte;
+            private global::System.Data.DataColumn columnNume_Prenume;
             
-            private global::System.Data.DataColumn columnData_imprumut;
+            private global::System.Data.DataColumn columnAdresa;
             
-            private global::System.Data.DataColumn columnData_returnarii;
+            private global::System.Data.DataColumn columnTelefon;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ImprumutDataTable() {
-                this.TableName = "Imprumut";
+            public CititorDataTable() {
+                this.TableName = "Cititor";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +298,7 @@ namespace LibraryApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ImprumutDataTable(global::System.Data.DataTable table) {
+            internal CititorDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,40 +315,40 @@ namespace LibraryApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected ImprumutDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected CititorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Id_cititorColumn {
+            public global::System.Data.DataColumn IdColumn {
                 get {
-                    return this.columnId_cititor;
+                    return this.columnId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Id_carteColumn {
+            public global::System.Data.DataColumn Nume_PrenumeColumn {
                 get {
-                    return this.columnId_carte;
+                    return this.columnNume_Prenume;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Data_imprumutColumn {
+            public global::System.Data.DataColumn AdresaColumn {
                 get {
-                    return this.columnData_imprumut;
+                    return this.columnAdresa;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Data_returnariiColumn {
+            public global::System.Data.DataColumn TelefonColumn {
                 get {
-                    return this.columnData_returnarii;
+                    return this.columnTelefon;
                 }
             }
             
@@ -363,48 +363,55 @@ namespace LibraryApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ImprumutRow this[int index] {
+            public CititorRow this[int index] {
                 get {
-                    return ((ImprumutRow)(this.Rows[index]));
+                    return ((CititorRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ImprumutRowChangeEventHandler ImprumutRowChanging;
+            public event CititorRowChangeEventHandler CititorRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ImprumutRowChangeEventHandler ImprumutRowChanged;
+            public event CititorRowChangeEventHandler CititorRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ImprumutRowChangeEventHandler ImprumutRowDeleting;
+            public event CititorRowChangeEventHandler CititorRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ImprumutRowChangeEventHandler ImprumutRowDeleted;
+            public event CititorRowChangeEventHandler CititorRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddImprumutRow(ImprumutRow row) {
+            public void AddCititorRow(CititorRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ImprumutRow AddImprumutRow(int Id_cititor, int Id_carte, System.DateTime Data_imprumut, System.DateTime Data_returnarii) {
-                ImprumutRow rowImprumutRow = ((ImprumutRow)(this.NewRow()));
+            public CititorRow AddCititorRow(int Id, string Nume_Prenume, string Adresa, string Telefon) {
+                CititorRow rowCititorRow = ((CititorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id_cititor,
-                        Id_carte,
-                        Data_imprumut,
-                        Data_returnarii};
-                rowImprumutRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowImprumutRow);
-                return rowImprumutRow;
+                        Id,
+                        Nume_Prenume,
+                        Adresa,
+                        Telefon};
+                rowCititorRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCititorRow);
+                return rowCititorRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CititorRow FindById(int Id) {
+                return ((CititorRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ImprumutDataTable cln = ((ImprumutDataTable)(base.Clone()));
+                CititorDataTable cln = ((CititorDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,55 +419,65 @@ namespace LibraryApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ImprumutDataTable();
+                return new CititorDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnId_cititor = base.Columns["Id_cititor"];
-                this.columnId_carte = base.Columns["Id_carte"];
-                this.columnData_imprumut = base.Columns["Data_imprumut"];
-                this.columnData_returnarii = base.Columns["Data_returnarii"];
+                this.columnId = base.Columns["Id"];
+                this.columnNume_Prenume = base.Columns["Nume_Prenume"];
+                this.columnAdresa = base.Columns["Adresa"];
+                this.columnTelefon = base.Columns["Telefon"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnId_cititor = new global::System.Data.DataColumn("Id_cititor", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_cititor);
-                this.columnId_carte = new global::System.Data.DataColumn("Id_carte", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_carte);
-                this.columnData_imprumut = new global::System.Data.DataColumn("Data_imprumut", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnData_imprumut);
-                this.columnData_returnarii = new global::System.Data.DataColumn("Data_returnarii", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnData_returnarii);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnNume_Prenume = new global::System.Data.DataColumn("Nume_Prenume", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNume_Prenume);
+                this.columnAdresa = new global::System.Data.DataColumn("Adresa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdresa);
+                this.columnTelefon = new global::System.Data.DataColumn("Telefon", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefon);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnId.AllowDBNull = false;
+                this.columnId.Unique = true;
+                this.columnNume_Prenume.AllowDBNull = false;
+                this.columnNume_Prenume.MaxLength = 60;
+                this.columnAdresa.AllowDBNull = false;
+                this.columnAdresa.MaxLength = 60;
+                this.columnTelefon.AllowDBNull = false;
+                this.columnTelefon.MaxLength = 60;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ImprumutRow NewImprumutRow() {
-                return ((ImprumutRow)(this.NewRow()));
+            public CititorRow NewCititorRow() {
+                return ((CititorRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ImprumutRow(builder);
+                return new CititorRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ImprumutRow);
+                return typeof(CititorRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ImprumutRowChanged != null)) {
-                    this.ImprumutRowChanged(this, new ImprumutRowChangeEvent(((ImprumutRow)(e.Row)), e.Action));
+                if ((this.CititorRowChanged != null)) {
+                    this.CititorRowChanged(this, new CititorRowChangeEvent(((CititorRow)(e.Row)), e.Action));
                 }
             }
             
@@ -468,8 +485,8 @@ namespace LibraryApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ImprumutRowChanging != null)) {
-                    this.ImprumutRowChanging(this, new ImprumutRowChangeEvent(((ImprumutRow)(e.Row)), e.Action));
+                if ((this.CititorRowChanging != null)) {
+                    this.CititorRowChanging(this, new CititorRowChangeEvent(((CititorRow)(e.Row)), e.Action));
                 }
             }
             
@@ -477,8 +494,8 @@ namespace LibraryApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ImprumutRowDeleted != null)) {
-                    this.ImprumutRowDeleted(this, new ImprumutRowChangeEvent(((ImprumutRow)(e.Row)), e.Action));
+                if ((this.CititorRowDeleted != null)) {
+                    this.CititorRowDeleted(this, new CititorRowChangeEvent(((CititorRow)(e.Row)), e.Action));
                 }
             }
             
@@ -486,14 +503,14 @@ namespace LibraryApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ImprumutRowDeleting != null)) {
-                    this.ImprumutRowDeleting(this, new ImprumutRowChangeEvent(((ImprumutRow)(e.Row)), e.Action));
+                if ((this.CititorRowDeleting != null)) {
+                    this.CititorRowDeleting(this, new CititorRowChangeEvent(((CititorRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveImprumutRow(ImprumutRow row) {
+            public void RemoveCititorRow(CititorRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -502,7 +519,7 @@ namespace LibraryApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                BibliotecaDataSet1 ds = new BibliotecaDataSet1();
+                BibliotecaDataSet ds = new BibliotecaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -520,7 +537,7 @@ namespace LibraryApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ImprumutDataTable";
+                attribute2.FixedValue = "CititorDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -564,127 +581,59 @@ namespace LibraryApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ImprumutRow : global::System.Data.DataRow {
+        public partial class CititorRow : global::System.Data.DataRow {
             
-            private ImprumutDataTable tableImprumut;
+            private CititorDataTable tableCititor;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ImprumutRow(global::System.Data.DataRowBuilder rb) : 
+            internal CititorRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableImprumut = ((ImprumutDataTable)(this.Table));
+                this.tableCititor = ((CititorDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id_cititor {
+            public int Id {
                 get {
-                    try {
-                        return ((int)(this[this.tableImprumut.Id_cititorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Id_cititor\' in table \'Imprumut\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableCititor.IdColumn]));
                 }
                 set {
-                    this[this.tableImprumut.Id_cititorColumn] = value;
+                    this[this.tableCititor.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id_carte {
+            public string Nume_Prenume {
                 get {
-                    try {
-                        return ((int)(this[this.tableImprumut.Id_carteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Id_carte\' in table \'Imprumut\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableCititor.Nume_PrenumeColumn]));
                 }
                 set {
-                    this[this.tableImprumut.Id_carteColumn] = value;
+                    this[this.tableCititor.Nume_PrenumeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime Data_imprumut {
+            public string Adresa {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableImprumut.Data_imprumutColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Data_imprumut\' in table \'Imprumut\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableCititor.AdresaColumn]));
                 }
                 set {
-                    this[this.tableImprumut.Data_imprumutColumn] = value;
+                    this[this.tableCititor.AdresaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime Data_returnarii {
+            public string Telefon {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableImprumut.Data_returnariiColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Data_returnarii\' in table \'Imprumut\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableCititor.TelefonColumn]));
                 }
                 set {
-                    this[this.tableImprumut.Data_returnariiColumn] = value;
+                    this[this.tableCititor.TelefonColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsId_cititorNull() {
-                return this.IsNull(this.tableImprumut.Id_cititorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetId_cititorNull() {
-                this[this.tableImprumut.Id_cititorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsId_carteNull() {
-                return this.IsNull(this.tableImprumut.Id_carteColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetId_carteNull() {
-                this[this.tableImprumut.Id_carteColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsData_imprumutNull() {
-                return this.IsNull(this.tableImprumut.Data_imprumutColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetData_imprumutNull() {
-                this[this.tableImprumut.Data_imprumutColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsData_returnariiNull() {
-                return this.IsNull(this.tableImprumut.Data_returnariiColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetData_returnariiNull() {
-                this[this.tableImprumut.Data_returnariiColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -692,22 +641,22 @@ namespace LibraryApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class ImprumutRowChangeEvent : global::System.EventArgs {
+        public class CititorRowChangeEvent : global::System.EventArgs {
             
-            private ImprumutRow eventRow;
+            private CititorRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ImprumutRowChangeEvent(ImprumutRow row, global::System.Data.DataRowAction action) {
+            public CititorRowChangeEvent(CititorRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ImprumutRow Row {
+            public CititorRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -723,7 +672,7 @@ namespace LibraryApp {
         }
     }
 }
-namespace LibraryApp.BibliotecaDataSet1TableAdapters {
+namespace LibraryApp.DataSets.BibliotecaDataSetTableAdapters {
     
     
     /// <summary>
@@ -735,7 +684,7 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ImprumutTableAdapter : global::System.ComponentModel.Component {
+    public partial class CititorTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -749,7 +698,7 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ImprumutTableAdapter() {
+        public CititorTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -846,21 +795,45 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Imprumut";
-            tableMapping.ColumnMappings.Add("Id_cititor", "Id_cititor");
-            tableMapping.ColumnMappings.Add("Id_carte", "Id_carte");
-            tableMapping.ColumnMappings.Add("Data_imprumut", "Data_imprumut");
-            tableMapping.ColumnMappings.Add("Data_returnarii", "Data_returnarii");
+            tableMapping.DataSetTable = "Cititor";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Nume_Prenume", "Nume_Prenume");
+            tableMapping.ColumnMappings.Add("Adresa", "Adresa");
+            tableMapping.ColumnMappings.Add("Telefon", "Telefon");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Cititor] WHERE (([Id] = @Original_Id) AND ([Nume_Prenume] = @O" +
+                "riginal_Nume_Prenume) AND ([Adresa] = @Original_Adresa) AND ([Telefon] = @Origin" +
+                "al_Telefon))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nume_Prenume", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume_Prenume", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Adresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefon", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Imprumut] ([Id_cititor], [Id_carte], [Data_imprumut], [Data_re" +
-                "turnarii]) VALUES (@Id_cititor, @Id_carte, @Data_imprumut, @Data_returnarii)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Cititor] ([Id], [Nume_Prenume], [Adresa], [Telefon]) VALUES (@" +
+                "Id, @Nume_Prenume, @Adresa, @Telefon);\r\nSELECT Id, Nume_Prenume, Adresa, Telefon" +
+                " FROM Cititor WHERE (Id = @Id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_cititor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_cititor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_carte", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_carte", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_imprumut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_imprumut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_returnarii", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_returnarii", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nume_Prenume", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume_Prenume", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Cititor] SET [Id] = @Id, [Nume_Prenume] = @Nume_Prenume, [Adresa] = @Adresa, [Telefon] = @Telefon WHERE (([Id] = @Original_Id) AND ([Nume_Prenume] = @Original_Nume_Prenume) AND ([Adresa] = @Original_Adresa) AND ([Telefon] = @Original_Telefon));
+SELECT Id, Nume_Prenume, Adresa, Telefon FROM Cititor WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nume_Prenume", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume_Prenume", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nume_Prenume", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nume_Prenume", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Adresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefon", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -876,7 +849,7 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id_cititor, Id_carte, Data_imprumut, Data_returnarii FROM dbo.Imprumut";
+            this._commandCollection[0].CommandText = "SELECT Id, Nume_Prenume, Adresa, Telefon FROM dbo.Cititor";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -884,7 +857,7 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BibliotecaDataSet1.ImprumutDataTable dataTable) {
+        public virtual int Fill(BibliotecaDataSet.CititorDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -897,9 +870,9 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BibliotecaDataSet1.ImprumutDataTable GetData() {
+        public virtual BibliotecaDataSet.CititorDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            BibliotecaDataSet1.ImprumutDataTable dataTable = new BibliotecaDataSet1.ImprumutDataTable();
+            BibliotecaDataSet.CititorDataTable dataTable = new BibliotecaDataSet.CititorDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -907,15 +880,15 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(BibliotecaDataSet1.ImprumutDataTable dataTable) {
+        public virtual int Update(BibliotecaDataSet.CititorDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(BibliotecaDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Imprumut");
+        public virtual int Update(BibliotecaDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Cititor");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -936,31 +909,66 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Id, string Original_Nume_Prenume, string Original_Adresa, string Original_Telefon) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_Nume_Prenume == null)) {
+                throw new global::System.ArgumentNullException("Original_Nume_Prenume");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nume_Prenume));
+            }
+            if ((Original_Adresa == null)) {
+                throw new global::System.ArgumentNullException("Original_Adresa");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Adresa));
+            }
+            if ((Original_Telefon == null)) {
+                throw new global::System.ArgumentNullException("Original_Telefon");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Telefon));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> Id_cititor, global::System.Nullable<int> Id_carte, global::System.Nullable<global::System.DateTime> Data_imprumut, global::System.Nullable<global::System.DateTime> Data_returnarii) {
-            if ((Id_cititor.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id_cititor.Value));
+        public virtual int Insert(int Id, string Nume_Prenume, string Adresa, string Telefon) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
+            if ((Nume_Prenume == null)) {
+                throw new global::System.ArgumentNullException("Nume_Prenume");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Nume_Prenume));
             }
-            if ((Id_carte.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Id_carte.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Data_imprumut.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Data_imprumut.Value));
+            if ((Adresa == null)) {
+                throw new global::System.ArgumentNullException("Adresa");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Adresa));
             }
-            if ((Data_returnarii.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Data_returnarii.Value));
+            if ((Telefon == null)) {
+                throw new global::System.ArgumentNullException("Telefon");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Telefon));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -977,6 +985,73 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int Id, string Nume_Prenume, string Adresa, string Telefon, int Original_Id, string Original_Nume_Prenume, string Original_Adresa, string Original_Telefon) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
+            if ((Nume_Prenume == null)) {
+                throw new global::System.ArgumentNullException("Nume_Prenume");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Nume_Prenume));
+            }
+            if ((Adresa == null)) {
+                throw new global::System.ArgumentNullException("Adresa");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Adresa));
+            }
+            if ((Telefon == null)) {
+                throw new global::System.ArgumentNullException("Telefon");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Telefon));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
+            if ((Original_Nume_Prenume == null)) {
+                throw new global::System.ArgumentNullException("Original_Nume_Prenume");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Nume_Prenume));
+            }
+            if ((Original_Adresa == null)) {
+                throw new global::System.ArgumentNullException("Original_Adresa");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Adresa));
+            }
+            if ((Original_Telefon == null)) {
+                throw new global::System.ArgumentNullException("Original_Telefon");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Telefon));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Nume_Prenume, string Adresa, string Telefon, int Original_Id, string Original_Nume_Prenume, string Original_Adresa, string Original_Telefon) {
+            return this.Update(Original_Id, Nume_Prenume, Adresa, Telefon, Original_Id, Original_Nume_Prenume, Original_Adresa, Original_Telefon);
+        }
     }
     
     /// <summary>
@@ -991,7 +1066,7 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private ImprumutTableAdapter _imprumutTableAdapter;
+        private CititorTableAdapter _cititorTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1013,12 +1088,12 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ImprumutTableAdapter ImprumutTableAdapter {
+        public CititorTableAdapter CititorTableAdapter {
             get {
-                return this._imprumutTableAdapter;
+                return this._cititorTableAdapter;
             }
             set {
-                this._imprumutTableAdapter = value;
+                this._cititorTableAdapter = value;
             }
         }
         
@@ -1041,9 +1116,9 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._imprumutTableAdapter != null) 
-                            && (this._imprumutTableAdapter.Connection != null))) {
-                    return this._imprumutTableAdapter.Connection;
+                if (((this._cititorTableAdapter != null) 
+                            && (this._cititorTableAdapter.Connection != null))) {
+                    return this._cititorTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1058,7 +1133,7 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._imprumutTableAdapter != null)) {
+                if ((this._cititorTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1070,14 +1145,14 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(BibliotecaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(BibliotecaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._imprumutTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Imprumut.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cititorTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Cititor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._imprumutTableAdapter.Update(updatedRows));
+                    result = (result + this._cititorTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1089,13 +1164,13 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(BibliotecaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(BibliotecaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._imprumutTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Imprumut.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cititorTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Cititor.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._imprumutTableAdapter.Update(addedRows));
+                    result = (result + this._cititorTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1107,13 +1182,13 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(BibliotecaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(BibliotecaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._imprumutTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Imprumut.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cititorTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Cititor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._imprumutTableAdapter.Update(deletedRows));
+                    result = (result + this._cititorTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1149,15 +1224,15 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(BibliotecaDataSet1 dataSet) {
+        public virtual int UpdateAll(BibliotecaDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._imprumutTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._imprumutTableAdapter.Connection) == false))) {
+            if (((this._cititorTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._cititorTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1193,13 +1268,13 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._imprumutTableAdapter != null)) {
-                    revertConnections.Add(this._imprumutTableAdapter, this._imprumutTableAdapter.Connection);
-                    this._imprumutTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._imprumutTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._imprumutTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._imprumutTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._imprumutTableAdapter.Adapter);
+                if ((this._cititorTableAdapter != null)) {
+                    revertConnections.Add(this._cititorTableAdapter, this._cititorTableAdapter.Connection);
+                    this._cititorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._cititorTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._cititorTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._cititorTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._cititorTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1260,9 +1335,9 @@ namespace LibraryApp.BibliotecaDataSet1TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._imprumutTableAdapter != null)) {
-                    this._imprumutTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._imprumutTableAdapter]));
-                    this._imprumutTableAdapter.Transaction = null;
+                if ((this._cititorTableAdapter != null)) {
+                    this._cititorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._cititorTableAdapter]));
+                    this._cititorTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
