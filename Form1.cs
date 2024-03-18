@@ -77,5 +77,23 @@ namespace LibraryApp
             Form3 carte = new Form3();
             carte.Show();
         }
+
+        private void carteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            UpdateCarte updateCarte = new UpdateCarte();    
+            updateCarte.Show();
+        }
+
+        private void imprumutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            UpdateImprumut updateImprumut = new UpdateImprumut();
+            updateImprumut.Show();
+        }
+
+        private void cititorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateCititor updateCititor = new UpdateCititor();
+            updateCititor.Show();
+        }
     }
 }

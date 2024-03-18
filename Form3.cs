@@ -64,5 +64,10 @@ namespace LibraryApp
             ShowCarti showCarti = new ShowCarti();
             showCarti.Show();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

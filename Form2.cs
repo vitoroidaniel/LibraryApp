@@ -39,10 +39,10 @@ namespace LibraryApp
                     command.CommandType = CommandType.StoredProcedure;
 
                     // Set the parameters for the stored procedure
-                    command.Parameters.AddWithValue("@Id_cititor", cmbCititor.Text);
-                    command.Parameters.AddWithValue("@Id_carte", cmbCarteImp.Text);
+                    command.Parameters.AddWithValue("@Id_cititor", int.Parse(cmbCititor.SelectedItem.ToString()));
+                    command.Parameters.AddWithValue("@Id_carte", int.Parse(cmbCarteImp.SelectedItem.ToString()));
                     command.Parameters.AddWithValue("@Data_imprumut", DateTime.Parse(lblCurDate.Text));
-                    command.Parameters.AddWithValue("@Data_returnarii", dateTimePicker1.Value); 
+                    command.Parameters.AddWithValue("@Data_returnarii", dateTimePicker1.Value);
 
                     command.ExecuteNonQuery();
                     MessageBox.Show("Carte inserată cu succes!");
@@ -128,6 +128,11 @@ namespace LibraryApp
         {
             ShowImprumut showImprumut = new ShowImprumut();
             showImprumut.Show();
+        }
+
+        private void cmbCititor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

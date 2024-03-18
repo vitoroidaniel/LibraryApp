@@ -40,6 +40,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.carteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprumutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprumutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cititorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.impumutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cititorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,7 +140,9 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.carteToolStripMenuItem,
-            this.imprumutToolStripMenuItem});
+            this.imprumutToolStripMenuItem,
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(834, 28);
@@ -152,6 +162,65 @@
             this.imprumutToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.imprumutToolStripMenuItem.Text = "Imprumut";
             this.imprumutToolStripMenuItem.Click += new System.EventHandler(this.imprumutToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.carteToolStripMenuItem1,
+            this.imprumutToolStripMenuItem1,
+            this.cititorToolStripMenuItem});
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.updateToolStripMenuItem.Text = "Update ";
+            // 
+            // carteToolStripMenuItem1
+            // 
+            this.carteToolStripMenuItem1.Name = "carteToolStripMenuItem1";
+            this.carteToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.carteToolStripMenuItem1.Text = "Carte";
+            this.carteToolStripMenuItem1.Click += new System.EventHandler(this.carteToolStripMenuItem1_Click);
+            // 
+            // imprumutToolStripMenuItem1
+            // 
+            this.imprumutToolStripMenuItem1.Name = "imprumutToolStripMenuItem1";
+            this.imprumutToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.imprumutToolStripMenuItem1.Text = "Imprumut";
+            this.imprumutToolStripMenuItem1.Click += new System.EventHandler(this.imprumutToolStripMenuItem1_Click);
+            // 
+            // cititorToolStripMenuItem
+            // 
+            this.cititorToolStripMenuItem.Name = "cititorToolStripMenuItem";
+            this.cititorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cititorToolStripMenuItem.Text = "Cititor";
+            this.cititorToolStripMenuItem.Click += new System.EventHandler(this.cititorToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.carteToolStripMenuItem2,
+            this.impumutToolStripMenuItem,
+            this.cititorToolStripMenuItem1});
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            // 
+            // carteToolStripMenuItem2
+            // 
+            this.carteToolStripMenuItem2.Name = "carteToolStripMenuItem2";
+            this.carteToolStripMenuItem2.Size = new System.Drawing.Size(152, 26);
+            this.carteToolStripMenuItem2.Text = "Carte";
+            // 
+            // impumutToolStripMenuItem
+            // 
+            this.impumutToolStripMenuItem.Name = "impumutToolStripMenuItem";
+            this.impumutToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.impumutToolStripMenuItem.Text = "Impumut";
+            // 
+            // cititorToolStripMenuItem1
+            // 
+            this.cititorToolStripMenuItem1.Name = "cititorToolStripMenuItem1";
+            this.cititorToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.cititorToolStripMenuItem1.Text = "Cititor";
             // 
             // Form1
             // 
@@ -193,6 +262,14 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem carteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imprumutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carteToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem imprumutToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cititorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carteToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem impumutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cititorToolStripMenuItem1;
     }
 }
 

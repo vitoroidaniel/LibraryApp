@@ -97,6 +97,7 @@
             this.cmbCititor.Name = "cmbCititor";
             this.cmbCititor.Size = new System.Drawing.Size(123, 24);
             this.cmbCititor.TabIndex = 6;
+            this.cmbCititor.SelectedIndexChanged += new System.EventHandler(this.cmbCititor_SelectedIndexChanged);
             // 
             // cmbCarteImp
             // 

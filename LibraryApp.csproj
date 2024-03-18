@@ -106,6 +106,24 @@
     <Compile Include="ShowImprumut.Designer.cs">
       <DependentUpon>ShowImprumut.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateCarte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCarte.Designer.cs">
+      <DependentUpon>UpdateCarte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCititor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCititor.Designer.cs">
+      <DependentUpon>UpdateCititor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateImprumut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateImprumut.Designer.cs">
+      <DependentUpon>UpdateImprumut.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +154,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShowImprumut.resx">
       <DependentUpon>ShowImprumut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCarte.resx">
+      <DependentUpon>UpdateCarte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCititor.resx">
+      <DependentUpon>UpdateCititor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateImprumut.resx">
+      <DependentUpon>UpdateImprumut.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BibliotecaDataSet.xsc">
       <DependentUpon>BibliotecaDataSet.xsd</DependentUpon>
