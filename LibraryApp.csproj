@@ -213,5 +213,8 @@
   <ItemGroup>
     <None Include="Resources\sylvia-yang-_ar2ENzmqb0-unsplash.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\LibrarySql.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
